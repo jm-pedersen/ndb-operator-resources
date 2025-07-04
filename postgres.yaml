@@ -32,14 +32,14 @@ spec:
     # If not specified, the corresponding Out-of-Box (OOB) profile will be used wherever applicable
     # Name is case-sensitive. ID is the UUID of the profile. Profile should be in the "READY" state
     # "id" & "name" are optional. If none provided, OOB may be resolved to any profile of that type
-    # profiles:
-    #   compute:
-    #     id: ""
-    #     name: ""
+    profiles:
+      compute:
+        id: "DEFAULT_OOB_SMALL_COMPUTE"
+        name: "3959c9b9-721e-4613-b6c3-c382cde73b65"
     #   # A Software profile is a mandatory input for closed-source engines: SQL Server & Oracle
-    #   software:
-    #     name: ""
-    #     id: ""
+      software:
+        name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB"
+        id: "ac1754e5-8811-48fc-b255-3e252f545483"
     #   network:
     #     id: ""
     #     name: ""

@@ -24,7 +24,7 @@ spec:
     # Credentials secret name for NDB installation
     # data: password, ssh_public_key
     credentialSecret: self-serve-postgres-secret
-    size: 10
+    size: 200
     timezone: "UTC"
     type: postgres
 
@@ -38,25 +38,25 @@ spec:
         id: "bbc50665-293c-41f3-bd9b-38b7174f1d6f"
     #   # A Software profile is a mandatory input for closed-source engines: SQL Server & Oracle
       software:
-        name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB"
-        id: "ac1754e5-8811-48fc-b255-3e252f545483"
-    #   network:
-    #     id: ""
-    #     name: ""
-    #   dbParam:
-    #     name: ""
-    #     id: ""
+        name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB (2.0)"
+        id: "472bd5c0-9a0a-4133-89e2-f1dde5e91b4c"
+      network:
+        id: "c9ffb51e-6816-47e3-be2f-a84a62186ef7"
+        name: "DEFAULT_OOB_POSTGRESQL_NETWORK"
+      dbParam:
+        name: "DEFAULT_POSTGRES_PARAMS"
+        id: "ba7db957-749d-466f-b8f7-092dbeb4e080"
       # # Only applicable for MSSQL databases
       # dbParamInstance:
       #   name: ""
       #   id: ""
-    # timeMachine:                        # Optional block, if removed the SLA defaults to NONE
-    #   sla : "NAME OF THE SLA"
-    #   dailySnapshotTime:   "12:34:56"   # Time for daily snapshot in hh:mm:ss format
-    #   snapshotsPerDay:     4            # Number of snapshots per day
-    #   logCatchUpFrequency: 90           # Frequency (in minutes)
-    #   weeklySnapshotDay:   "WEDNESDAY"  # Day of the week for weekly snapshot
-    #   monthlySnapshotDay:  24           # Day of the month for monthly snapshot
-    #   quarterlySnapshotMonth: "Jan"     # Start month of the quarterly snapshot
+    timeMachine:                        # Optional block, if removed the SLA defaults to NONE
+      sla : "DEFAULT_OOB_BRASS_SLA"
+      dailySnapshotTime:   "07:00:00"   # Time for daily snapshot in hh:mm:ss format
+      snapshotsPerDay:     1            # Number of snapshots per day
+      logCatchUpFrequency: 30           # Frequency (in minutes)
+      weeklySnapshotDay:   "FRIDAY"  # Day of the week for weekly snapshot
+      monthlySnapshotDay:  4           # Day of the month for monthly snapshot
+      quarterlySnapshotMonth: "Jan"     # Start month of the quarterly snapshot
     # additionalArguments:                # Optional block, can specify additional arguments that are unique to database engines.
     #   listener_port: "8080"

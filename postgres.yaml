@@ -35,7 +35,7 @@ spec:
     profiles:
       compute:
         name: "DEFAULT_OOB_SMALL_COMPUTE"
-        id: "3959c9b9-721e-4613-b6c3-c382cde73b65"
+        id: "bbc50665-293c-41f3-bd9b-38b7174f1d6f"
     #   # A Software profile is a mandatory input for closed-source engines: SQL Server & Oracle
       software:
         name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB"

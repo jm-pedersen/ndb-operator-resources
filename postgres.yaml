@@ -34,8 +34,8 @@ spec:
     # "id" & "name" are optional. If none provided, OOB may be resolved to any profile of that type
     profiles:
       compute:
-        id: "DEFAULT_OOB_SMALL_COMPUTE"
-        name: "3959c9b9-721e-4613-b6c3-c382cde73b65"
+        name: "DEFAULT_OOB_SMALL_COMPUTE"
+        id: "3959c9b9-721e-4613-b6c3-c382cde73b65"
     #   # A Software profile is a mandatory input for closed-source engines: SQL Server & Oracle
       software:
         name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB"

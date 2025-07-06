@@ -38,8 +38,8 @@ spec:
         id: "bbc50665-293c-41f3-bd9b-38b7174f1d6f"
     #   # A Software profile is a mandatory input for closed-source engines: SQL Server & Oracle
       software:
-        name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB (2.0)"
-        id: "472bd5c0-9a0a-4133-89e2-f1dde5e91b4c"
+        name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB"
+        id: "ac1754e5-8811-48fc-b255-3e252f545483"
       network:
         id: "c9ffb51e-6816-47e3-be2f-a84a62186ef7"
         name: "DEFAULT_OOB_POSTGRESQL_NETWORK"

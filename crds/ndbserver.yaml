@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/part-of: ndb-operator
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/created-by: ndb-operator
-  name: ndb
+  name: ndb-gitops
 spec:
     # Name of the secret that holds the credentials for NDB: username, password and ca_certificate created earlier
     credentialSecret: ndb-nkp-2-81-secret

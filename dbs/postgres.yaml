@@ -2,10 +2,10 @@ apiVersion: ndb.nutanix.com/v1alpha1
 kind: Database
 metadata:
   # This name that will be used within the kubernetes cluster
-  name: gitops-postgres
+  name: gitops-demo-postgres
 spec:
   # Name of the NDBServer resource created earlier
-  ndbRef: ndb
+  ndbRef: ndb-gitops
   isClone: false
   # Database instance specific details (that is to be provisioned)
   databaseInstance:
@@ -13,7 +13,7 @@ spec:
     # Can be fetched from the GET /clusters endpoint
     clusterId: "f8f7e5a9-5fc1-4c26-aa38-8be405f3a94e"
     # The database instance name on NDB
-    name: "gitops-postgres"
+    name: "gitops-demo-postgres"
     # The description of the database instance
     description: "Postgres database provisioned via GitOps"
     # Names of the databases on that instance

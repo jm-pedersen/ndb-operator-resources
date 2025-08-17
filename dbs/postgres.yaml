@@ -1,40 +1,40 @@
-# apiVersion: ndb.nutanix.com/v1alpha1
-# kind: Database
-# metadata:
-#   name: gitops-demo-postgres
-# spec:
-#   ndbRef: ndb-gitops
-#   isClone: false
-#   databaseInstance:
-#     clusterId: "f8f7e5a9-5fc1-4c26-aa38-8be405f3a94e"
-#     name: "gitops-demo-postgres"
-#     description: "Postgres database provisioned via GitOps"
-#     databaseNames:
-#       - database_one
-#       - database_two
-#       - database_three
-#     credentialSecret: self-serve-postgres-secret
-#     size: 200
-#     timezone: "UTC"
-#     type: postgres
-#     profiles:
-#       compute:
-#         name: "DEFAULT_OOB_SMALL_COMPUTE"
-#         id: "bbc50665-293c-41f3-bd9b-38b7174f1d6f"
-#       software:
-#         name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB"
-#         id: "ac1754e5-8811-48fc-b255-3e252f545483"
-#       network:
-#         id: "c9ffb51e-6816-47e3-be2f-a84a62186ef7"
-#         name: "DEFAULT_OOB_POSTGRESQL_NETWORK"
-#       dbParam:
-#         name: "DEFAULT_POSTGRES_PARAMS"
-#         id: "ba7db957-749d-466f-b8f7-092dbeb4e080"
-#     timeMachine:
-#       sla : "DEFAULT_OOB_BRASS_SLA"
-#       dailySnapshotTime:   "07:00:00"
-#       snapshotsPerDay:     1
-#       logCatchUpFrequency: 30
-#       weeklySnapshotDay:   "FRIDAY"
-#       monthlySnapshotDay:  4
-#       quarterlySnapshotMonth: "Jan"
+apiVersion: ndb.nutanix.com/v1alpha1
+kind: Database
+metadata:
+  name: gitops-demo-postgres
+spec:
+  ndbRef: ndb-gitops
+  isClone: false
+  databaseInstance:
+    clusterId: "f8f7e5a9-5fc1-4c26-aa38-8be405f3a94e"
+    name: "gitops-demo-postgres"
+    description: "Postgres database provisioned via GitOps"
+    databaseNames:
+      - database_one
+      - database_two
+      - database_three
+    credentialSecret: self-serve-postgres-secret
+    size: 200
+    timezone: "UTC"
+    type: postgres
+    profiles:
+      compute:
+        name: "DEFAULT_OOB_SMALL_COMPUTE"
+        id: "bbc50665-293c-41f3-bd9b-38b7174f1d6f"
+      software:
+        name: "POSTGRES_15.6_ROCKY_LINUX_8_OOB"
+        id: "ac1754e5-8811-48fc-b255-3e252f545483"
+      network:
+        id: "c9ffb51e-6816-47e3-be2f-a84a62186ef7"
+        name: "DEFAULT_OOB_POSTGRESQL_NETWORK"
+      dbParam:
+        name: "DEFAULT_POSTGRES_PARAMS"
+        id: "ba7db957-749d-466f-b8f7-092dbeb4e080"
+    timeMachine:
+      sla : "DEFAULT_OOB_BRASS_SLA"
+      dailySnapshotTime:   "07:00:00"
+      snapshotsPerDay:     1
+      logCatchUpFrequency: 30
+      weeklySnapshotDay:   "FRIDAY"
+      monthlySnapshotDay:  4
+      quarterlySnapshotMonth: "Jan"
